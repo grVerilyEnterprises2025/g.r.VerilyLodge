@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-R Verily Lodge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .page-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .page-content.active {
+            display: block;
+            opacity: 1;
+        }
+        .nav-link.active {
+            @apply text-blue-600 font-bold;
+        }
+        /* Ensure mobile menu slides in smoothly */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-3xl font-bold text-gray-900 nav-link">G-R Verily Lodge</a>
+            <!-- Hamburger Menu Button (Visible on Mobile) -->
+            <button id="menu-toggle" class="md:hidden text-gray-600 focus:outline-none" aria-label="Toggle navigation menu">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 text-gray-600 font-semibold">
+                <a href="#home" class="hover:text-gray-900 transition-colors duration-300 nav-link">Home</a>
+                <a href="#about" class="hover:text-gray-900 transition-colors duration-300 nav-link">About</a>
+                <a href="#amenities" class="hover:text-gray-900 transition-colors duration-300 nav-link">Amenities</a>
+                <a href="#gallery" class="hover:text-gray-900 transition-colors duration-300 nav-link">Gallery</a>
+                <a href="#contact" class="hover:text-gray-900 transition-colors duration-300 nav-link">Contact</a>
+                <a href="#book" class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold hover:bg-blue-700 transition-colors duration-300 transform hover:scale-105 nav-link">Book Now</a>
+            </div>
+        </nav>
+        <!-- Mobile Menu (Hidden by Default) -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg transform -translate-x-full absolute top-16 left-0 w-full h-screen flex flex-col items-center space-y-4 py-6 text-gray-600 font-semibold">
+            <a href="#home" class="hover:text-gray-900 transition-colors duration-300 nav-link py-2">Home</a>
+            <a href="#about" class="hover:text-gray-900 transition-colors duration-300 nav-link py-2">About</a>
+            <a href="#amenities" class="hover:text-gray-900 transition-colors duration-300 nav-link py-2">Amenities</a>
+            <a href="#gallery" class="hover:text-gray-900 transition-colors duration-300 nav-link py-2">Gallery</a>
+            <a href="#contact" class="hover:text-gray-900 transition-colors duration-300 nav-link py-2">Contact</a>
+            <a href="#book" class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold hover:bg-blue-700 transition-colors duration-300 transform hover:scale-105 nav-link">Book Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Page Content -->
+        <div id="home" class="page-content active">
+            <section class="relative h-[60vh] md:h-[80vh] bg-cover bg-center flex items-center justify-center text-center text-white" style="background-image: url('https://placehold.co/1920x1080/4f5d75/ffffff?text=Lodge+Exterior');">
+                <div class="absolute inset-0 bg-black opacity-40"></div>
+                <div class="relative z-10 p-6 md:p-12 max-w-4xl mx-auto rounded-lg backdrop-blur-sm bg-black bg-opacity-30 shadow-lg">
+                    <h3 class="text-4xl md:text-5xl font-extrabold mb-4 animate-fade-in-up">The Nest of Elegance and Quality
+                    <br><br> <i> Kiota cha Fahari na Ubora<i>
+                    </h3>
+                    <p class="text-lg md:text-xl font-medium mb-8 animate-fade-in-up delay-200">Get accomodation services worth your pay</p>
+                    <a href="#book" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-110 shadow-lg animate-fade-in-up delay-400 nav-link">Book Your Stay</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page Content -->
+        <div id="about" class="page-content">
+            <section class="py-16 md:py-24">
+                <div class="container mx-auto px-6 max-w-6xl">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-gray-900">About Our Lodge</h2>
+                    <div class="md:flex md:space-x-12 items-center">
+                        <div class="md:w-1/2 mb-8 md:mb-0">
+                            <img src="https://placehold.co/800x600/f0f2f5/333333?text=Cozy+Lounge" alt="Lodge Interior" class="rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h3 class="text-3xl font-bold mb-4 text-gray-900">A Place to Unwind</h3>
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                G-R Verily Lodge offes you a stay you will remember thanks to its simple style and assured comfort.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                Whether you're seeking a quiet solo retreat, a romantic getaway, or a fun-filled family vacation, our doors are open to you. Enjoy the breathtaking views and the warm hospitality that makes G-R Verily Lodge a home of tranquility and leisure.  KARIBUNI SANA
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Amenities Page Content -->
+        <div id="amenities" class="page-content">
+            <section class="bg-gray-100 py-16 md:py-24">
+                <div class="container mx-auto px-6 max-w-6xl text-center">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-gray-900">Our Amenities</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-500">
+                            <div class="text-blue-600 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m0 0l-7 7m7-7v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001 1h1a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h1a1 1 0 001-1v-9.586a1 1 0 00-.293-.707l-2.414-2.414A1 1 0 0015.586 2H13v2.586a1 1 0 00.293.707L16 6z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">self contained rooms</h3>
+                            <p class="text-gray-600">Offering you the most comfortable personal space you need</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-500">
+                            <div class="text-blue-600 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">24-Hour Room Service</h3>
+                            <p class="text-gray-600">Our staff is available around the clock to cater to your needs and requests.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-500">
+                            <div class="text-blue-600 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.5 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.5-3-9s1.343-9 3-9m-9 9h6" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Entertainment</h3>
+                            <p class="text-gray-600">Screens, Music and an unlimited free Wi-Fi assusring your never bored</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Gallery Page Content -->
+        <div id="gallery" class="page-content">
+            <section class="py-16 md:py-24">
+                <div class="container mx-auto px-6 max-w-6xl text-center">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-gray-900">Gallery</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Added Lightbox functionality to the Gallery images -->
+                        <img src="https://placehold.co/600x400/808b96/ffffff?text=Cozy+Bedroom" alt="Cozy sefl-bedrooms" class="rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openLightbox(this.src)">
+                        <img src="https://placehold.co/600x400/9b59b6/ffffff?text=Lodge+Restaurant" alt="Lodge restaurant" class="rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openLightbox(this.src)">
+                        <img src="https://placehold.co/600x400/3498db/ffffff?text=Pleasing+room+service" alt="Outstanding room service" class="rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openLightbox(this.src)">
+                        <img src="https://placehold.co/600x400/2ecc71/ffffff?text=Calming+view" alt="calming views" class="rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openLightbox(this.src)">
+                        <img src="https://placehold.co/600x400/e74c3c/ffffff?text=Entertainment" alt="Entertainment" class="rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openLightbox(this.src)">
+                        <img src="https://placehold.co/600x400/f1c40f/ffffff?text=Classic decor" alt="Classic decor " class="rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openLightbox(this.src)">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Booking Page Content -->
+        <div id="book" class="page-content">
+            <section class="bg-blue-600 py-16 md:py-24 text-white">
+                <div class="container mx-auto px-6 max-w-4xl text-center">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-8">Book Your Stay</h2>
+                    <p class="text-lg mb-8">Ready for an unforgettable escape? Fill out the form below to book your perfect retreat.</p>
+                    
+                    <!-- Form Updated for Automatic Sending via Formspree -->
+                    <form 
+                        class="space-y-6 bg-white p-8 rounded-2xl shadow-xl text-gray-800" 
+                        action="https://formspree.io/f/YOUR_UNIQUE_FORM_ID" 
+                        method="POST"
+                    >
+                        <div>
+                            <label for="name" class="block text-left font-semibold mb-2">Full Name</label>
+                            <!-- Changed name attribute to match the label -->
+                            <input type="text" id="name" name="Full Name" class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-left font-semibold mb-2">Email Address</label>
+                            <!-- NOTE: Used '_replyto' for Formspree to enable easy reply from the email client -->
+                            <input type="email" id="email" name="_replyto" class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" required>
+                        </div>
+                         <div>
+                            <label for="contact" class="block text-left font-semibold mb-2">Phone Number</label>
+                            <!-- Changed name attribute to match the label -->
+                            <input type="tel" id="contact" name="Phone Number" placeholder="+xxx xxx xxx xxx" class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-blue-500 transition-colors"> 
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="check-in" class="block text-left font-semibold mb-2">Check-in Date</label>
+                                <!-- Changed name attribute to match the label -->
+                                <input type="date" id="check-in" name="Check-in Date" class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" required>
+                            </div>
+                            <div>
+                                <label for="check-out" class="block text-left font-semibold mb-2">Check-out Date</label>
+                                <!-- Changed name attribute to match the label -->
+                                <input type="date" id="check-out" name="Check-out Date" class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="guests" class="block text-left font-semibold mb-2">Number of Guests</label>
+                            <!-- Changed name attribute to match the label -->
+                            <input type="number" id="guests" name="Number of Guests" class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" min="1" required>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-md">Submit Booking</button>
+                        <!-- Removed booking-message element as Formspree handles the post-submission success message -->
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page Content -->
+        <div id="contact" class="page-content">
+            <section class="py-16 md:py-24">
+                <div class="container mx-auto px-6 max-w-6xl text-center">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900">Get in Touch</h2>
+                    <p class="text-lg text-gray-700 mb-8">
+                        We'd love to hear from you. Feel free to reach out with any questions.
+                    </p>
+                    <div class="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-8">
+                        <div class="text-center p-6 bg-white rounded-2xl shadow-lg w-full md:w-1/3 transform hover:scale-105 transition-transform duration-500">
+                            <h3 class="font-bold text-xl mb-2">Address</h3>
+                            <p class="text-gray-600">Mikese shopping centre, Mikese Morogoro</p>
+                        </div>
+                        <div class="text-center p-6 bg-white rounded-2xl shadow-lg w-full md:w-1/3 transform hover:scale-105 transition-transform duration-500">
+                            <h3 class="font-bold text-xl mb-2">Phone Number</h3>
+                            <p class="text-gray-600">+255 681 111 149</p>
+                        </div>
+                        <div class="text-center p-6 bg-white rounded-2xl shadow-lg w-full md:w-1/3 transform hover:scale-105 transition-transform duration-500">
+                            <h3 class="font-bold text-xl mb-2">Email</h3>
+                            <a href="mailto:g.rverilylodge2025@gmail.com" class="text-yellow-600 hover:underline">g.rverilylodge2025@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal for Gallery Images (Added for better gallery interaction) -->
+    <div id="lightbox-modal" class="fixed inset-0 bg-black bg-opacity-90 z-[9999] hidden flex items-center justify-center p-4" onclick="closeLightbox()">
+        <div class="relative max-w-5xl max-h-full" onclick="event.stopPropagation()">
+            <!-- Close button -->
+            <button class="absolute top-4 right-4 text-white text-4xl font-light opacity-80 hover:opacity-100 transition-opacity" onclick="closeLightbox()">&times;</button>
+            <img id="lightbox-image" src="" alt="Gallery Image" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl">
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-8 text-center">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2025 G-R Verily Lodge. All rights reserved.</p>
+            <p>&copy; 2025 FROST TECHNOLOGIES. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pageContents = document.querySelectorAll('.page-content');
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            /**
+             * Handles switching between main content pages.
+             * @param {string} pageIdWithHash - The page ID including the hash (e.g., "#gallery").
+             */
+            function showPage(pageIdWithHash) {
+                // Determine the target ID without the hash
+                const targetId = pageIdWithHash.startsWith('#') ? pageIdWithHash.substring(1) : pageIdWithHash;
+                
+                // Hide all pages
+                pageContents.forEach(page => page.classList.remove('active'));
+                
+                // Show the requested page
+                const targetPage = document.getElementById(targetId);
+
+                if (targetPage) {
+                    targetPage.classList.add('active');
+                } else {
+                    console.error(`Page not found for ID: ${targetId}. Check navigation links and content IDs.`);
+                }
+                
+                // Update active link class for visual feedback
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === pageIdWithHash) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+                
+                // Close mobile menu after clicking a link
+                mobileMenu.classList.add('-translate-x-full');
+            }
+
+            // 1. Attach click listeners to all navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const pageId = link.getAttribute('href');
+                    showPage(pageId);
+                });
+            });
+
+            // 2. Toggle mobile menu
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('-translate-x-full');
+            });
+
+            // 3. Initial page load based on URL hash
+            const initialHash = window.location.hash || '#home';
+            showPage(initialHash);
+            
+            // --- Lightbox functions for the Gallery ---
+            function openLightbox(imageSrc) {
+                const modal = document.getElementById('lightbox-modal');
+                const image = document.getElementById('lightbox-image');
+                image.src = imageSrc;
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevents background scrolling
+            }
+            window.openLightbox = openLightbox;
+
+            function closeLightbox() {
+                const modal = document.getElementById('lightbox-modal');
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto'; // Restores background scrolling
+            }
+            window.closeLightbox = closeLightbox;
+
+            // Removed the old handleBooking function as we are now using Formspree
+        });
+    </script>
+</body>
+</html>
